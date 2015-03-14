@@ -1,0 +1,16 @@
+#!/usr/bin/env php
+<?php
+/**
+ * Afrihost Usage Reports
+ */
+
+require __DIR__.'/vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+
+// Register commands
+use WoganMay\Afrihost\Command\GetRemainingBandwidthCommand;
+
+$application = new Application();
+$application->add(new GetRemainingBandwidthCommand);
+$application->run();
